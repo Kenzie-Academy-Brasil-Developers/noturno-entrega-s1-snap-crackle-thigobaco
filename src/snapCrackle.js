@@ -1,4 +1,4 @@
-function scnapCrackle(maxValue){
+function snapCrackle(maxValue){
     let Msg = "";
     for ( let Valor = 1; Valor <= maxValue; Valor ++){
         if ( Valor %2 !== 0){
@@ -19,7 +19,7 @@ function scnapCrackle(maxValue){
     console.log(Msg);
 }
 
-scnapCrackle(30)
+snapCrackle(12)
 
 
 
