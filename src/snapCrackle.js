@@ -1,22 +1,18 @@
-let primeira = "Snap";
-let segundaMsg = "Crackle";
-let terceiraMsg = "SnapCrackle";
-let maxValue = 12;
-let valor = 1;
+
+function snapCrackle(maxValue) {
 let saidaArr = [];
-function snapCrackle() {
-  while (valor <= maxValue) {
+  for (let valor=1;valor <= maxValue; valor++) {
     if (valor % 5 === 0 && valor % 2 !== 0) {
-      saidaArr.push(terceiraMsg);
+      saidaArr.push("SnapCrackle");
     } else if (valor % 5 === 0) {
-      saidaArr.push(segundaMsg);
+      saidaArr.push("Crackle");
     } else if (valor % 5 === 0 || valor % 2 !== 1) {
       saidaArr.push(valor);
     } else if (valor % 2 !== 0) {
-      saidaArr.push(primeira);
+      saidaArr.push("Snap");
     }
-    valor++;
+    
   }
-  return saidaArr // para retornar a saida do meu array nas codições
+  return `${saidaArr}` 
 }
-console.log(snapCrackle().join()); // para retornar a junção da matriz.(.join) tive que pesquisar sobre um método que me desse esse retorno https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+console.log(snapCrackle(12)); 
